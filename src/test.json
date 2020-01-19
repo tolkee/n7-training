@@ -1,0 +1,16 @@
+{
+  "list": [
+    {
+      "false": "they speak it really good",
+      "correct": "they speak it really well"
+    },
+    {
+      "false": "false 2",
+      "correct": "correct 2"
+    },
+    {
+      "false": "false 3",
+      "correct": "correct 3"
+    }
+  ]
+}
