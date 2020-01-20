@@ -19,7 +19,7 @@ const App: React.FC = () => {
           icon="fa-language"
         />
         ,
-        <ToolCard size={140} color="lightgrey" icon="fa-cloud" />
+        <ToolCard link="" size={140} color="lightgrey" icon="fa-cloud" />
       </AppWrapper>
     </Layout>
   );

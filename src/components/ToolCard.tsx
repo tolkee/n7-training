@@ -6,14 +6,14 @@ interface ToolCardProps {
   title?: string;
   color: string;
   icon: string;
-  link?: string;
+  link: string;
   size: number;
 }
 
 const CardWrapper = styled(Link)<{
   color: string;
   icon: string;
-  linked: boolean;
+  linked: string;
   size: number;
 }>`
   ${p =>
@@ -56,7 +56,7 @@ function ToolCard(props: ToolCardProps) {
     <CardWrapper
       size={props.size}
       linked={props.link}
-      to={props.link ? props.link : ""}
+      to={props.link}
       icon={props.icon}
       color={props.color}
     >
