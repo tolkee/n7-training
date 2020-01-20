@@ -11,7 +11,7 @@ interface SpellCheckProps {
 
 const SpellCheckWrapper = styled.div`
   color: white;
-  width: 70%;
+  width: 90%;
   height: 40%;
 `;
 
@@ -27,13 +27,21 @@ const CardFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-top: 20px;
 `;
 const Text = styled.div`
   flex-grow: 0;
   color: white;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   margin-top: 20px;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: 30px;
+  }
+  @media (min-width: 1281px) {
+    font-size: 50px;
+  }
 `;
 
 const FinishText = styled.div`
