@@ -5,13 +5,21 @@ import ToolCard from "../components/ToolCard";
 
 const AppWrapper = styled.div`
   color: white;
+  display: flex;
 `;
 
 const App: React.FC = () => {
   return (
-    <Layout title="n7-training">
+    <Layout title="N7-Training">
       <AppWrapper>
-        <ToolCard link="/spellcheck" color="#00cc99" icon="fa-language" />
+        <ToolCard
+          size={140}
+          link="/spellcheck"
+          color="#00cc99"
+          icon="fa-language"
+        />
+        ,
+        <ToolCard size={140} color="lightgrey" icon="fa-cloud" />
       </AppWrapper>
     </Layout>
   );

@@ -143,7 +143,11 @@
       },
       {
         "false": "Répondre à une question",
-        "corrects": ["To answer a question"]
+        "corrects": [
+          "To answer a question",
+          "To reply to a question",
+          "To respond to a question"
+        ]
       }
     ],
     [
@@ -173,7 +177,11 @@
       },
       {
         "false": "I'm not really agree with you",
-        "corrects": ["I disagree with you"]
+        "corrects": ["I disagree with you", "I'm in desagreement with you"]
+      },
+      {
+        "false": "It's more healthier",
+        "corrects": ["It's healthier", "It's more healthy"]
       },
       {
         "false": "Maybe we can ask to Gregoire",
@@ -189,7 +197,10 @@
       },
       {
         "false": "What do you think on this point ?",
-        "corrects": ["What do you think about this point ?"]
+        "corrects": [
+          "What do you think about this point ?",
+          "What do you think of this point ?"
+        ]
       },
       {
         "false": "It's a choice of people",
@@ -217,7 +228,15 @@
       },
       {
         "false": "In your point of you",
-        "corrects": ["From your point of you"]
+        "corrects": [
+          "From your point of you",
+          "To my mind",
+          "In my opinion",
+          "In my eyes",
+          "The way I see it",
+          "As for me",
+          "As far as i'm concerned"
+        ]
       },
       {
         "false": "That depends of the person",
@@ -229,7 +248,7 @@
       },
       {
         "false": "fatness",
-        "corrects": ["obesity"]
+        "corrects": ["obesity", "overweight", "being fat"]
       },
       {
         "false": "We have still time",
@@ -240,8 +259,29 @@
         "corrects": ["The competitors"]
       },
       {
+        "false": "He believes on what he says",
+        "corrects": ["He believes what he says"]
+      },
+      {
+        "false": "The sugar is everywhere",
+        "corrects": ["Sugar is everywhere"]
+      },
+      {
+        "false": "To find a solution to this",
+        "corrects": ["To find a solution for this"]
+      },
+      {
+        "false": "Why do we found so much sugar on everything ?",
+        "corrects": ["Why do we find so much sugar in everything ?"]
+      },
+      {
+        "false": "Informations on meeting",
+        "corrects": ["Information on meeting"]
+      },
+
+      {
         "false": "soda",
-        "corrects": ["soft drinks"]
+        "corrects": ["Soft drinks", "Fizzy drinks"]
       }
     ],
     [
@@ -307,7 +347,113 @@
       },
       {
         "false": "Shortly",
-        "corrects": ["Briefly"]
+        "corrects": ["Briefly", "In brief"]
+      }
+    ],
+    [
+      {
+        "false": "We will discuss about that",
+        "corrects": ["We will discuss that"]
+      },
+      {
+        "false": "Can you explain us",
+        "corrects": ["Can you explain to us"]
+      },
+      {
+        "false": "The different medias",
+        "corrects": ["The different media"]
+      },
+      {
+        "false": "False informations",
+        "corrects": ["False information"]
+      },
+      {
+        "false": "Are fake news used for",
+        "corrects": ["Is fake news used for"]
+      },
+      {
+        "false": "People who is engaged in",
+        "corrects": ["People who are involved"]
+      },
+      {
+        "false": "A wrong information",
+        "corrects": ["The wrong information"]
+      },
+      {
+        "false": "You will maybe not like it",
+        "corrects": ["Maybe you won't like it", "Perhaps you won't like it"]
+      },
+      {
+        "false": "I agree with you about that",
+        "corrects": ["I agree with you on that"]
+      },
+      {
+        "false": "It depend",
+        "corrects": ["It depends on"]
+      },
+      {
+        "false": "Facebook has no contents",
+        "corrects": ["Facebook has no content"]
+      },
+      {
+        "false": "He is not responsible of it",
+        "corrects": ["He is not responsible for it"]
+      },
+      {
+        "false": "Social media and internet",
+        "corrects": ["Social media and the internet"]
+      },
+      {
+        "false": "They take part of this",
+        "corrects": ["They take part in this"]
+      },
+      {
+        "false": "Other concurrences",
+        "corrects": ["Other opponents", "Other competitors"]
+      },
+      {
+        "false": "Fonctionnement",
+        "corrects": ["How it works"]
+      },
+      {
+        "false": "We have decide",
+        "corrects": ["We have decided"]
+      },
+      {
+        "false": "He is critic",
+        "corrects": ["He is critical", "He is a critic"]
+      },
+      {
+        "false": "it's complicate",
+        "corrects": ["it's complicated"]
+      },
+      {
+        "false": "The amount of topics",
+        "corrects": ["The number of topics"]
+      },
+      {
+        "false": "Thank you for participate",
+        "corrects": ["Thank you for participating in"]
+      },
+      {
+        "false": "It's more easier",
+        "corrects": ["It's easier"]
+      },
+      {
+        "false": "Peut tu te présenter ?",
+        "corrects": ["Can you explain you ?"]
+      },
+      {
+        "false": "Nombre (dénombrable)",
+        "corrects": ["Number"]
+      },
+      {
+        "false": "Nombre (indénombrable)",
+        "corrects": ["Amount"]
+      },
+      {
+        "false": "Fiancé",
+        "corrects": ["Engaged"]
       }
     ],
     [

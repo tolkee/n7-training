@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 interface LayoutProps {
   title: string;
   children: React.ReactNode;
-  menuButton?: boolean;
+  backButton?: boolean;
 }
 
 const LayoutWrapper = styled.div`
@@ -24,13 +24,14 @@ const TopBar = styled.div`
   position: absolute;
   top: 0;
   padding: 30px;
+  display: flex;
 `;
 
 function Layout(props: LayoutProps) {
   return (
     <LayoutWrapper>
       <Helmet>
-        <title>{props.title}</title>
+        <title>{`N7 | ${props.title}`}</title>
         <style>
           {`
             body,
@@ -42,21 +43,14 @@ function Layout(props: LayoutProps) {
           `}
         </style>
       </Helmet>
+      {props.children}
       <TopBar>
-        {props.menuButton && (
-          <Link to="/">
-            <button className="button is-medium is-primary is-outlined">
-              <span className="icon">
-                <i
-                  style={{ fontSize: "30px", color: "white" }}
-                  className="fas fa-bars"
-                ></i>
-              </span>
-            </button>
+        {props.backButton && (
+          <Link to="/" className="icon has-text-primary">
+            <i style={{ fontSize: "40px" }} className="fas fa-chevron-left"></i>
           </Link>
         )}
       </TopBar>
-      {props.children}
     </LayoutWrapper>
   );
 }

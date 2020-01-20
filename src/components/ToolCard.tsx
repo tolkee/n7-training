@@ -6,25 +6,41 @@ interface ToolCardProps {
   title?: string;
   color: string;
   icon: string;
-  link: string;
+  link?: string;
+  size: number;
 }
 
-const CardWrapper = styled(Link)<{ color: string; icon: string }>`
-  cursor: pointer;
+const CardWrapper = styled(Link)<{
+  color: string;
+  icon: string;
+  linked: boolean;
+  size: number;
+}>`
+  ${p =>
+    !p.linked &&
+    `
+    cursor: default;
+  `}
+
   text-decoration: none;
   color: white;
 
-  width: 140px;
-  height: 140px;
+  width: ${p => p.size}px;
+  height: ${p => p.size}px;
   border-radius: 5px;
 
   background-color: ${p => p.color};
 
   :hover {
-    opacity: 0.8;
+    opacity: ${p => (p.linked ? 0.8 : 1)};
+    ${p =>
+      !p.linked &&
+      `
+      color: white;
+    `}
   }
   .${p => p.icon} {
-    font-size: 70px;
+    font-size: ${p => (p.size * 60) / 100}px;
   }
 
   transition: opacity 0.3s;
@@ -32,11 +48,18 @@ const CardWrapper = styled(Link)<{ color: string; icon: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: ${p => (p.size * 10) / 100}px;
 `;
 
 function ToolCard(props: ToolCardProps) {
   return (
-    <CardWrapper to={props.link} icon={props.icon} color={props.color}>
+    <CardWrapper
+      size={props.size}
+      linked={props.link}
+      to={props.link ? props.link : ""}
+      icon={props.icon}
+      color={props.color}
+    >
       <i className={`fas ${props.icon}`}></i>
     </CardWrapper>
   );

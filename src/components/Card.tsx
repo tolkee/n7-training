@@ -7,7 +7,7 @@ interface CardProps {
 
 const Wrapper = styled.nav`
   height: fit-content;
-  padding: 15px;
+  padding: 20px;
   box-sizing: border-box;
   background-color: #171717;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 10px;

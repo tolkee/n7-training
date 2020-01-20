@@ -11,8 +11,14 @@ interface SpellCheckProps {
 
 const SpellCheckWrapper = styled.div`
   color: white;
-  width: 90%;
-  height: 40%;
+  width: 60%;
+  @media (min-width: 481px) and (max-width: 767px) {
+    width: 90%;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 90%;
+  }
 `;
 
 const CardHeader = styled.div`
@@ -21,13 +27,14 @@ const CardHeader = styled.div`
   align-items: flex-start;
 `;
 const CardContent = styled.div`
+  margin-top: 20px;
+  margin-bottom: 40px;
   text-align: center;
 `;
 const CardFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 20px;
 `;
 
 const Text = styled.div`
@@ -35,7 +42,6 @@ const Text = styled.div`
   color: white;
   font-size: 40px;
   font-weight: 700;
-  margin-top: 20px;
 
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 30px;
@@ -55,7 +61,11 @@ const Input = styled.input`
   width: 70%;
   background-color: black;
   @media (min-width: 320px) and (max-width: 480px) {
-    width: 90%;
+    width: 100%;
+  }
+
+  ::placeholder {
+    color: #606060;
   }
 `;
 
@@ -83,7 +93,7 @@ function SpellCheck(props: SpellCheckProps) {
     setIndex(0);
   };
   return (
-    <Layout menuButton title="N7|SpellCheck">
+    <Layout backButton title="SpellCheck">
       <SpellCheckWrapper>
         <Card>
           <CardHeader>
@@ -124,7 +134,7 @@ function SpellCheck(props: SpellCheckProps) {
                   : "is-danger"
               }`}
               type="text"
-              placeholder="Enter the correct text"
+              placeholder="Enter the corrected text (case sensitive)"
             />
           </CardContent>
           <CardFooter>
