@@ -28,7 +28,7 @@ const Text = styled.div`
   color: white;
   font-size: 50px;
   font-weight: 700;
-  margin-top: 50px;
+  margin-top: 20px;
 `;
 
 const Input = styled.input`
@@ -43,13 +43,13 @@ const Number = styled.div`
 `;
 function SpellCheck(props: SpellCheckProps) {
   const [index, setIndex] = useState(0);
-  const [value, setValue] = useState(data.list[index].false);
+  const [value, setValue] = useState(data.list1[index].false);
   return (
     <Layout title="N7|SpellCheck">
       <SpellCheckWrapper>
         <Card>
           <CardHeader>
-            <Text>{data.list[index].false}</Text>
+            <Text>{data.list1[index].false}</Text>
           </CardHeader>
           <CardContent>
             <Input
@@ -57,28 +57,28 @@ function SpellCheck(props: SpellCheckProps) {
               onChange={e => {
                 setValue(e.target.value);
               }}
-              className="input is-large is-primary"
+              className={`input is-large ${value === data.list1[index].correct ? "is-primary" : "is-danger"}`}
               type="text"
               placeholder="Enter the correct text"
             />
           </CardContent>
           <CardFooter>
-            <Number>{`${index}/${data.list.length - 1}`}</Number>
-            {value === data.list[index].correct ? (
+            <Number>{`${index}/${data.list1.length - 1}`}</Number>
+            {value === data.list1[index].correct ? (
               <button
                 onClick={() => {
                   setIndex(index + 1);
-                  setValue("");
+                  setValue(data.list1[index + 1].false);
                 }}
                 className="button is-medium is-primary"
               >
                 Continue
               </button>
             ) : (
-              <button disabled className="button is-medium is-primary">
-                Continue
+                <button disabled className="button is-medium is-primary">
+                  Continue
               </button>
-            )}
+              )}
           </CardFooter>
         </Card>
       </SpellCheckWrapper>

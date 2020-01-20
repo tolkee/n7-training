@@ -1,16 +1,148 @@
 {
-  "list": [
+  "list1": [
     {
-      "false": "they speak it really good",
-      "correct": "they speak it really well"
+      "false": "To share contents online",
+      "correct": "To share content online"
     },
     {
-      "false": "false 2",
-      "correct": "correct 2"
+      "false": "I'am an old farmer",
+      "correct": "I'am an elderly farmer"
     },
     {
-      "false": "false 3",
-      "correct": "correct 3"
+      "false": "Can you explain us your opinion ?",
+      "correct": "Can you explain your opinion to us ?"
+    },
+    {
+      "false": "He does a lot of efforts",
+      "correct": "He makes a lot of effort"
+    },
+    {
+      "false": "At home making my stuffs",
+      "correct": "At home doing my stuff"
+    },
+    {
+      "false": "We will try to answer to this question",
+      "correct": "We will try to answer this question"
+    },
+    {
+      "false": "How to become youtubers ?",
+      "correct": "How do you become a youtuber ?"
+    },
+    {
+      "false": "2 billions of people",
+      "correct": "2 billion people"
+    },
+    {
+      "false": "It is associated to a new type",
+      "correct": "It is associated with a new type"
+    },
+    {
+      "false": "They make a real job",
+      "correct": "They do a real job"
+    },
+    {
+      "false": "I made a lot of studies",
+      "correct": "I studied a lot"
+    },
+    {
+      "false": "Like he said",
+      "correct": "He said"
+    },
+    {
+      "false": "I think it's a loss of time",
+      "correct": "I think it's a waste of time"
+    },
+    {
+      "false": "A 32 years old camera girl",
+      "correct": "A 32 year old camera girl"
+    },
+    {
+      "false": "It's kinda complicated",
+      "correct": "It's somewhat complicated"
+    },
+    {
+      "false": "I do my montage",
+      "correct": "I edit"
+    },
+    {
+      "false": "According to you",
+      "correct": "What do you think ?"
+    },
+    {
+      "false": "Do you want to add on that ?",
+      "correct": "Do you want to add to that ?"
+    },
+    {
+      "false": "It's a type of cheat",
+      "correct": "It's a type of cheating"
+    },
+    {
+      "false": "The rich people / The poor people",
+      "correct": "The rich / The poor"
+    },
+    {
+      "false": "What do they product for the society ?",
+      "correct": "What do they produce for society ?"
+    },
+    {
+      "false": "It learnt me a lot",
+      "correct": "It taught me a lot"
+    },
+    {
+      "false": "I prefer watch tv",
+      "correct": "I prefer watching tv"
+    },
+    {
+      "false": "I'm totally agree with you",
+      "correct": "I agree with you"
+    },
+    {
+      "false": "They can access to that info",
+      "correct": "They can access that info"
+    },
+    {
+      "false": "They make nonsense",
+      "correct": "They mess around"
+    },
+    {
+      "false": "False informations",
+      "correct": "Fake informations"
+    },
+    {
+      "false": "We do mistakes",
+      "correct": "We make mistakes"
+    },
+    {
+      "false": "Less and less people",
+      "correct": "Fewer and fewer people"
+    },
+    {
+      "false": "When I was a student all these things didn't existed",
+      "correct": "When I was a student none of these things existed"
+    },
+    {
+      "false": "To go in justice",
+      "correct": "To go to court"
+    },
+    {
+      "false": "For short",
+      "correct": "In brief"
+    },
+    {
+      "false": "Do you want to say something ?",
+      "correct": "Do you want to say anything ?"
+    },
+    {
+      "false": "Are you agree with that ?",
+      "correct": "Do you agree with that ?"
+    },
+    {
+      "false": "on t'écoute",
+      "correct": "We're all ears"
+    },
+    {
+      "false": "Répondre à une question",
+      "correct": "To answer a question"
     }
   ]
 }
