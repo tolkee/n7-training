@@ -29,6 +29,7 @@ const CardFooter = styled.div`
   align-items: flex-end;
   margin-top: 20px;
 `;
+
 const Text = styled.div`
   flex-grow: 0;
   color: white;
@@ -53,6 +54,9 @@ const FinishText = styled.div`
 const Input = styled.input`
   width: 70%;
   background-color: black;
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 90%;
+  }
 `;
 
 const Number = styled.div`
@@ -79,7 +83,7 @@ function SpellCheck(props: SpellCheckProps) {
     setIndex(0);
   };
   return (
-    <Layout title="N7|SpellCheck">
+    <Layout menuButton title="N7|SpellCheck">
       <SpellCheckWrapper>
         <Card>
           <CardHeader>
@@ -125,24 +129,40 @@ function SpellCheck(props: SpellCheckProps) {
           </CardContent>
           <CardFooter>
             <Number>{`${index}/${list.length - 1}`}</Number>
-            {finished ? (
-              <FinishText>Finished</FinishText>
-            ) : (
-              <button
-                disabled={!list[index].corrects.includes(value)}
-                onClick={() => {
-                  if (index === list.length - 1) {
-                    setfinished(true);
-                  } else {
-                    setIndex(index + 1);
-                    setValue("");
-                  }
-                }}
-                className="button is-medium is-primary"
-              >
-                Continue
-              </button>
-            )}
+            <div>
+              {finished ? (
+                <FinishText>Finished</FinishText>
+              ) : (
+                <div>
+                  <button
+                    className="button is-medium is-warning"
+                    style={{ marginRight: "10px" }}
+                    onClick={() => setValue(list[index].corrects[0])}
+                  >
+                    <span className="icon">
+                      <i
+                        style={{ fontSize: "30px", color: "black" }}
+                        className="fas fa-bolt"
+                      ></i>
+                    </span>
+                  </button>
+                  <button
+                    disabled={!list[index].corrects.includes(value)}
+                    onClick={() => {
+                      if (index === list.length - 1) {
+                        setfinished(true);
+                      } else {
+                        setIndex(index + 1);
+                        setValue("");
+                      }
+                    }}
+                    className="button is-medium is-primary"
+                  >
+                    Continue
+                  </button>
+                </div>
+              )}
+            </div>
           </CardFooter>
         </Card>
       </SpellCheckWrapper>

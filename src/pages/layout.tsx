@@ -1,10 +1,12 @@
 import React from "react";
 import Helmet from "react-helmet";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 interface LayoutProps {
   title: string;
   children: React.ReactNode;
+  menuButton?: boolean;
 }
 
 const LayoutWrapper = styled.div`
@@ -13,6 +15,15 @@ const LayoutWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+`;
+
+const TopBar = styled.div`
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  padding: 30px;
 `;
 
 function Layout(props: LayoutProps) {
@@ -31,6 +42,20 @@ function Layout(props: LayoutProps) {
           `}
         </style>
       </Helmet>
+      <TopBar>
+        {props.menuButton && (
+          <Link to="/">
+            <button className="button is-medium is-primary is-outlined">
+              <span className="icon">
+                <i
+                  style={{ fontSize: "30px", color: "white" }}
+                  className="fas fa-bars"
+                ></i>
+              </span>
+            </button>
+          </Link>
+        )}
+      </TopBar>
       {props.children}
     </LayoutWrapper>
   );
