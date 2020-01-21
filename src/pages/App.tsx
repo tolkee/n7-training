@@ -18,7 +18,6 @@ const App: React.FC = () => {
           color="#00cc99"
           icon="fa-language"
         />
-        ,
         <ToolCard link="" size={140} color="lightgrey" icon="fa-cloud" />
       </AppWrapper>
     </Layout>

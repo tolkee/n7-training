@@ -120,7 +120,7 @@ function SpellCheck(props: SpellCheckProps) {
             <Text>{list[index].false}</Text>
             <Input
               style={{
-                color: list[index].corrects.includes(value)
+                color: list[index].corrects.map(correct => correct.toLowerCase()).includes(value.toLowerCase())
                   ? "#00d1b2"
                   : "#f14668"
               }}
@@ -129,10 +129,10 @@ function SpellCheck(props: SpellCheckProps) {
                 setValue(e.target.value);
               }}
               className={`input is-large ${
-                list[index].corrects.includes(value)
+                list[index].corrects.map(correct => correct.toLowerCase()).includes(value.toLowerCase())
                   ? "is-primary"
                   : "is-danger"
-              }`}
+                }`}
               type="text"
               placeholder="Enter the corrected text (case sensitive)"
             />
@@ -143,35 +143,35 @@ function SpellCheck(props: SpellCheckProps) {
               {finished ? (
                 <FinishText>Finished</FinishText>
               ) : (
-                <div>
-                  <button
-                    className="button is-medium is-warning"
-                    style={{ marginRight: "10px" }}
-                    onClick={() => setValue(list[index].corrects[0])}
-                  >
-                    <span className="icon">
-                      <i
-                        style={{ fontSize: "30px", color: "black" }}
-                        className="fas fa-bolt"
-                      ></i>
-                    </span>
+                  <div>
+                    <button
+                      className="button is-medium is-warning"
+                      style={{ marginRight: "10px" }}
+                      onClick={() => setValue(list[index].corrects[0])}
+                    >
+                      <span className="icon">
+                        <i
+                          style={{ fontSize: "30px", color: "black" }}
+                          className="fas fa-bolt"
+                        ></i>
+                      </span>
+                    </button>
+                    <button
+                      disabled={!list[index].corrects.map(correct => correct.toLowerCase()).includes(value.toLowerCase())}
+                      onClick={() => {
+                        if (index === list.length - 1) {
+                          setfinished(true);
+                        } else {
+                          setIndex(index + 1);
+                          setValue("");
+                        }
+                      }}
+                      className="button is-medium is-primary"
+                    >
+                      Continue
                   </button>
-                  <button
-                    disabled={!list[index].corrects.includes(value)}
-                    onClick={() => {
-                      if (index === list.length - 1) {
-                        setfinished(true);
-                      } else {
-                        setIndex(index + 1);
-                        setValue("");
-                      }
-                    }}
-                    className="button is-medium is-primary"
-                  >
-                    Continue
-                  </button>
-                </div>
-              )}
+                  </div>
+                )}
             </div>
           </CardFooter>
         </Card>
