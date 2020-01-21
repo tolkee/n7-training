@@ -9,7 +9,7 @@ interface SpellCheckProps {
   title: string;
 }
 
-const SpellCheckWrapper = styled.div`
+const SpellCheckWrapper = styled.form`
   color: white;
   width: 60%;
   @media (min-width: 481px) and (max-width: 767px) {
@@ -91,10 +91,20 @@ function SpellCheck(props: SpellCheckProps) {
       ? setList(data.lists.reduce(reducer))
       : setList(data.lists[+e.target.value]);
     setIndex(0);
+    setfinished(false);
+    setValue("");
   };
   return (
     <Layout backButton title="SpellCheck">
-      <SpellCheckWrapper>
+      <SpellCheckWrapper onSubmit={(e) => {
+        e.preventDefault();
+        if (index === list.length - 1) {
+          setfinished(true);
+        } else {
+          setIndex(index + 1);
+          setValue("");
+        }
+      }}>
         <Card>
           <CardHeader>
             <div className="control has-icons-left">
@@ -134,7 +144,7 @@ function SpellCheck(props: SpellCheckProps) {
                   : "is-danger"
                 }`}
               type="text"
-              placeholder="Enter the corrected text (case sensitive)"
+              placeholder="Enter the corrected text"
             />
           </CardContent>
           <CardFooter>
@@ -147,6 +157,7 @@ function SpellCheck(props: SpellCheckProps) {
                     <button
                       className="button is-medium is-warning"
                       style={{ marginRight: "10px" }}
+                      type="button"
                       onClick={() => setValue(list[index].corrects[0])}
                     >
                       <span className="icon">
@@ -158,15 +169,8 @@ function SpellCheck(props: SpellCheckProps) {
                     </button>
                     <button
                       disabled={!list[index].corrects.map(correct => correct.toLowerCase()).includes(value.toLowerCase())}
-                      onClick={() => {
-                        if (index === list.length - 1) {
-                          setfinished(true);
-                        } else {
-                          setIndex(index + 1);
-                          setValue("");
-                        }
-                      }}
                       className="button is-medium is-primary"
+                      type="submit"
                     >
                       Continue
                   </button>

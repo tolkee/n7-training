@@ -10,7 +10,7 @@ interface ToolCardProps {
   size: number;
 }
 
-const CardWrapper = styled(Link)<{
+const CardWrapper = styled(Link) <{
   color: string;
   icon: string;
   linked: string;
@@ -34,8 +34,8 @@ const CardWrapper = styled(Link)<{
   :hover {
     opacity: ${p => (p.linked ? 0.8 : 1)};
     ${p =>
-      !p.linked &&
-      `
+    !p.linked &&
+    `
       color: white;
     `}
   }
